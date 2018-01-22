@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>融资建议</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<script src="laydate/laydate.js"></script>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+html {
+	/* background-color: #E3E3E3; */
+	font-size: 14px;
+	color: #000;
+	font-family: '微软雅黑'
+}
+
+h2 {
+	line-height: 30px;
+	font-size: 20px;
+}
+
+a,a:hover {
+	text-decoration: none;
+}
+
+pre {
+	font-family: '微软雅黑'
+}
+
+
+.box a {
+	padding-right: 20px;
+}
+
+
+h3 {
+	margin: 10px 0;
+}
+
+.layinput {
+	height: 22px;
+	line-height: 22px;
+	width: 150px;
+	margin: 0;
+}
+</style>
+</head>
+<body style="background: #FFFFFF;">
+	<div class="container" style="margin-top:10px">
+		<div class="row" style="margin-top:10px">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="EnterpriseID">企业ID</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="EnterpriseID"
+							id="EnterpriseID" placeholder="企业ID">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label "
+						for="TransactionDate">交易日期 </label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="TransactionDate"
+							id="TransactionDate" placeholder="交易日期" >
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label"  for="TransactionTime">交易时间
+					</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="TransactionTime"
+							id="TransactionTime" placeholder="交易时间 "
+							onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="margin-top:10px">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="BankStatement">银行流水号</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="BankStatement"
+							id="BankStatement" placeholder="银行流水号">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="BankAccount">银行账号</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="BankAccount"
+							id="BankAccount" placeholder="银行账号 ">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="BankName">账户名称</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="BankName"
+							id="BankName" placeholder="账户名称 ">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="margin-top:10px">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="AccountType">账户性质</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="AccountType"
+							id="AccountType" placeholder="账户性质">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="EnterpriseName">企业名称</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="EnterpriseName"
+							id="EnterpriseName" placeholder="企业名称">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="FinanceName">金融机构</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="FinanceName"
+							id="FinanceName" placeholder="金融机构 ">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin-top:10px">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="Bank">开户银行</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="Bank" id="Bank"
+							placeholder="开户银行">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="Currency">币种 </label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="Currency"
+							id="Currency" placeholder="币种 ">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="LoanAmount">借方金额</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="LoanAmount"
+							id="LoanAmount" placeholder="借方金额">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="margin-top:10px">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="BorrowAmount">贷方金额</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="BorrowAmount"
+							id="BorrowAmount" placeholder="贷方金额">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="Balance">当前余额 </label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="Balance"
+							id="Balance" placeholder="当前余额">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="CounterBankAccount">对方银行账号</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="CounterBankAccount"
+							id="CounterBankAccount" placeholder="对方银行账号">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="margin-top:10px">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="CounterBankName">对方账户名称</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="CounterBankName"
+							id="CounterBankName" placeholder="对方账户名称">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="CounterBank">对方开户行
+					</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="CounterBank"
+							id="CounterBank" placeholder="对方开户行 ">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="col-sm-4 control-label" for="Usage">用途（或备注）</label>
+					<div class="input-group">
+						<textarea class="form-control" rows="3" name="Usage"
+							placeholder="用途（或备注 "></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+	!function() {
+		laydate.skin('danlan');//切换皮肤，请查看skins下面皮肤库
+		laydate({
+			elem : '#TransactionDate'
+		});//绑定元素	
+	}();
+	//日期范围限制
+	var start = {
+		elem : '#start',
+		format : 'YYYY-MM-DD',
+		min : laydate.now(), //设定最小日期为当前日期
+		max : '2099-06-16', //最大日期
+		istime : true,
+		istoday : false,
+		choose : function(datas) {
+			end.min = datas; //开始日选好后，重置结束日的最小日期
+			end.start = datas //将结束日的初始值设定为开始日
+		}
+	};
+	var end = {
+		elem : '#end',
+		format : 'YYYY-MM-DD',
+		min : laydate.now(),
+		max : '2099-06-16',
+		istime : true,
+		istoday : false,
+		choose : function(datas) {
+			start.max = datas; //结束日选好后，充值开始日的最大日期
+		}
+	};
+	laydate(start);
+	laydate(end);
+	//自定义日期格式
+	laydate({
+		elem : '#test1',
+		format : 'YYYY年MM月DD日',
+		festival : true, //显示节日
+		choose : function(datas) { //选择日期完毕的回调
+			alert('得到：' + datas);
+		}
+	});
+	//日期范围限定在昨天到明天
+	laydate({
+		elem : '#hello3',
+		min : laydate.now(-1), //-1代表昨天，-2代表前天，以此类推
+		max : laydate.now(+1)
+	//+1代表明天，+2代表后天，以此类推
+	});
+	
+	
+</script>
+<script >
+/* 		var date=new Date();
+		var nowDate=date.toLocaleString();
+		var TransactionDate=$("#TransactionDate").val();
+		//TransactionDate.attr("placeholder",nowDate);
+		alert(nowDate); */
+</script>
+</html>

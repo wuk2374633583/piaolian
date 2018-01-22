@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>申请详情页</title>
+<link href="css/iconfont.css" rel="stylesheet" type="text/css"/>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/fileUpload.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/fileUpload.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="laydate/laydate.js"></script>
+<style type="text/css">
+	ul.nav-pills {
+			top: 20px;
+			position: fixed;
+		}
+	 
+</style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+	<div class="container" style="margin-top:10px">
+	 <!--  <div class="jumbotron">
+        <h1>融资申请</h1>
+    	</div> -->
+		<!-- 导航栏 -->
+		 <div class="col-md-3" id="myScrollspy">
+			<div class="container-fluid">
+				<div class="container-fluid">
+					<ul class="nav nav-pills nav-stacked">
+						<li class="active"><a href="#section1">企业基本信息</a>
+						</li>
+						<li><a href="#section2">银行信息</a>
+						</li>
+						<li><a href="#section3">融资记录</a>
+						</li>
+						<li><a href="#section4">交易电子资料</a>
+						</li>
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">企业财务状况<span class="caret"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<li><a href="#section51">资产负债表</a></li>
+								<li><a href="#section52">利润表</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-md-9">
+			<!--企业信息  -->
+			<div id="section1">
+				<div class="row" style="margin-top:20px">
+					<div class="col-md-9">
+						<div class="form-group">
+							<label class="col-sm-5 control-label" style="font-size:20px" for="interestRate">企业基本信息</label>
+							<span class="caret" id="enterpriseInfoHide" ></span>
+						</div>
+					</div>
+				</div>
+				<div class="row" id="enterpriseInfo" style="margin-top:20px">
+					<div class="col-md-9">
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="EnterpriseName"
+								style="font-weight:normal">企业名称</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="EnterpriseName"
+									id="EnterpriseName" placeholder="企业名称" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="License"
+								style="font-weight:normal">营业执照证件号码</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="License"
+									id="License" placeholder="营业执照证件号码" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="OrgSeries"
+								style="font-weight:normal">组织机构代码证号码</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="OrgSeries"
+									id="OrgSeries" placeholder="组织机构代码证号码" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="TaxSeries"
+								style="font-weight:normal">税务登记证号码</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="TaxSeries"
+									id="TaxSeries" placeholder="税务登记证号码" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="OwnerName"
+								style="font-weight:normal">法人姓名</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="OwnerName"
+									id="OwnerName" placeholder="法人姓名" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="OwnerID"
+								style="font-weight:normal">法人身份证号码</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="OwnerID"
+									id="OwnerID" placeholder="法人身份证号码" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="Phone"
+								style="font-weight:normal">手机联系方式</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="Phone" id="Phone"
+									placeholder="手机联系方式" readonly>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+			</div>
+
+			<!--银行信息  -->
+			<div id="section2">
+				<div class="row" style="margin-top:20px">
+					<div class="col-md-9">
+						<div class="form-group">
+							<label class="col-sm-5 control-label" style="font-size:20px" for="interestRate">银行信息</label>
+							<span class="caret" id="bankInfoHide"></span>
+						</div>
+					</div>
+				</div>
+				<div class="row" id="bankInfo" style="margin-top:20px">
+					<div class="col-md-9">
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="BankName"
+								style="font-weight:normal">银行账户名</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="BankName"
+									id="BankName" placeholder="银行账户名" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="BankAccount"
+								style="font-weight:normal">银行账户</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="BankAccount"
+									id="BankAccount" placeholder="银行账户" readonly>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 融资记录 -->
+			<div id="section3">
+				<div class="row" style="margin-top:20px">
+					<div class="col-md-9">
+						<div class="form-group">
+							<label class="col-sm-5 control-label" style="font-size:20px">融资记录</label>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="row  pre-scrollable" style="margin-top:20px">
+					<table class="table-bordered table-hover " width="1800px">
+						<tr style="font-weight:bold">
+							<td>企业ID</td>
+							<td>交易日期</td>
+							<td>交易时间</td>
+							<td>银行流水号</td>
+							<td>银行账号</td>
+							<td>账户名称</td>
+							<td>账户性质</td>
+							<td>企业名称</td>
+							<td>金融机构</td>
+							<td>开户银行</td>
+							<td>币种</td>
+							<td>借方金额</td>
+							<td>贷方金额</td>
+							<td>当前余额</td>
+							<td>对方银行账号</td>
+							<td>对方账户名称</td>
+							<td>对方开户行</td>
+							<td>用途（或备注）</td>
+
+						</tr>
+						<tr>
+							<td>12345</td>
+							<td>2018.01.17</td>
+							<td>2018.01.17 16:00</td>
+							<td>123456789</td>
+							<td>123456789090987</td>
+							<td>去搜财</td>
+							<td>私人</td>
+							<td>睿魔方</td>
+							<td>XXXXXX</td>
+							<td>招商银行</td>
+							<td>人民币</td>
+							<td>123456.00</td>
+							<td>45678.00</td>
+							<td>567890.00</td>
+							<td>12345678909876543</td>
+							<td>紫马财行</td>
+							<td>招商银行</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>12345</td>
+							<td>2018.01.17</td>
+							<td>2018.01.17 16:00</td>
+							<td>123456789</td>
+							<td>123456789090987</td>
+							<td>去搜财</td>
+							<td>私人</td>
+							<td>睿魔方</td>
+							<td>XXXXXX</td>
+							<td>招商银行</td>
+							<td>人民币</td>
+							<td>123456.00</td>
+							<td>45678.00</td>
+							<td>567890.00</td>
+							<td>12345678909876543</td>
+							<td>紫马财行</td>
+							<td>招商银行</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>12345</td>
+							<td>2018.01.17</td>
+							<td>2018.01.17 16:00</td>
+							<td>123456789</td>
+							<td>123456789090987</td>
+							<td>去搜财</td>
+							<td>私人</td>
+							<td>睿魔方</td>
+							<td>XXXXXX</td>
+							<td>招商银行</td>
+							<td>人民币</td>
+							<td>123456.00</td>
+							<td>45678.00</td>
+							<td>567890.00</td>
+							<td>12345678909876543</td>
+							<td>紫马财行</td>
+							<td>招商银行</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>12345</td>
+							<td>2018.01.17</td>
+							<td>2018.01.17 16:00</td>
+							<td>123456789</td>
+							<td>123456789090987</td>
+							<td>去搜财</td>
+							<td>私人</td>
+							<td>睿魔方</td>
+							<td>XXXXXX</td>
+							<td>招商银行</td>
+							<td>人民币</td>
+							<td>123456.00</td>
+							<td>45678.00</td>
+							<td>567890.00</td>
+							<td>12345678909876543</td>
+							<td>紫马财行</td>
+							<td>招商银行</td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				<div class="row" style="margin-top:20px" align="right">
+					<ul class="pagination">
+						<li><a href="#" aria-label="Previous"> <span
+								aria-hidden="true">&laquo;</span> </a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#" aria-label="Next"> <span
+								aria-hidden="true">&raquo;</span> </a></li>
+					</ul>
+				</div>
+
+
+				<div class="col-md-6">
+					<div id="fileUploadContent" class="fileUploadContent"></div>
+				</div>
+			</div>
+
+			<!-- 交易电子资料 -->
+			<div id="section4">
+				<div class="row" style="margin-top:20px">
+					<div class="col-md-9">
+						<div class="form-group">
+							<label class="col-sm-5 control-label" style="font-size:20px">交易电子资料</label>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="row" style="margin-top:20px">
+					<div class="col-md-12">
+						<table class="table-bordered table-hover " style="overflow:scroll">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-6">
+						<div id="fileUploadContent" class="fileUploadContent"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 企业财务状况 -->
+			<div class="row" style="margin-top:20px">
+				<div class="col-md-9">
+					<div class="form-group">
+						<label class="col-sm-5 control-label" style="font-size:20px">企业财务状况</label>
+					</div>
+				</div>
+			</div>
+
+			<!-- 资产负债表 -->
+			<div id="section51">
+				<div class="row" style="margin-top:20px">
+					<div class="col-md-9">
+						<div class="form-group">
+							<label class="col-sm-5 control-label">资产负债表</label>
+						</div>
+					</div>
+				</div>
+				<div class="row" id="bankInfo" style="margin-top:20px">
+					<div class="col-md-9">
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="EnterpriseID"
+								style="font-weight:normal">企业ID</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="EnterpriseID"
+									id="EnterpriseID" placeholder="企业ID">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ReportDate"
+								style="font-weight:normal" >报表日期</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="ReportDate"
+									id="ReportDate" placeholder="报表日期" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ReceivableAmount"
+								style="font-weight:normal">应收帐款</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="ReceivableAmount"
+									id="ReceivableAmount" placeholder="应收帐款" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="CapitalAmount"
+								style="font-weight:normal">资产总计</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="CapitalAmount"
+									id="CapitalAmount" placeholder="资产总计" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="PayableBill"
+								style="font-weight:normal">应付票据</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="PayableBill"
+									id="PayableBill" placeholder="应付票据" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="PayableAmount"
+								style="font-weight:normal">应付帐款</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="PayableAmount"
+									id="PayableAmount" placeholder="应付帐款" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="Liabilities"
+								style="font-weight:normal">负债总计</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="Liabilities"
+									id="Liabilities" placeholder="负债总计" readonly>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 利润表 -->
+			<div id="section52">
+				<div class="row" style="margin-top:20px">
+					<div class="col-md-9">
+						<div class="form-group">
+							<label class="col-sm-5 control-label">利润表</label>
+						</div>
+					</div>
+				</div>
+				<div class="row" id="bankInfo" style="margin-top:20px">
+					<div class="col-md-9">
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="EnterpriseID"
+								style="font-weight:normal">企业ID</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="EnterpirseID"
+									id="EnterpirseID" placeholder="企业ID" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="ReportDate"
+								style="font-weight:normal">报表日期</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="ReportDate"
+									id="ReportDate1" placeholder="报表日期" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="Income"
+								style="font-weight:normal">营业收入</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="Income"
+									id="Income" placeholder="营业收入" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="Cost"
+								style="font-weight:normal">营业成本</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="Cost"
+									id="Cost" placeholder="营业成本" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-4 control-label" for="NetIncome"
+								style="font-weight:normal">净利润</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="NetIncome"
+									id="NetIncome" placeholder="净利润" readonly>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+<!-- 			<div class="col-md-9" align="right" style="margin-top:10px">
+				<button type="button" class="btn btn-info"></button>
+			</div> -->
+		</div>
+	</div>
+</body>
+<script>
+	//隐藏显示企业信息
+	$("#enterpriseInfoHide").click(function() {
+		$("#enterpriseInfo").slideToggle();
+	});
+
+	//隐藏显示银行信息
+	$("#bankInfoHide").click(function() {
+		$("#bankInfo").slideToggle();
+	});
+
+	//文件上传
+	$("#fileUploadContent").initUpload({
+		"uploadUrl" : "#",//上传文件信息地址
+		//"size":350,//文件大小限制，单位kb,默认不限制
+		//"maxFileNumber":3,//文件个数限制，为整数
+		//"filelSavePath":"",//文件上传地址，后台设置的根目录
+		"beforeUpload" : beforeUploadFun,//在上传前执行的函数
+		//"onUpload":onUploadFun，//在上传后执行的函数
+		//autoCommit:true,//文件是否自动上传
+		"fileType" : [ 'png', 'jpg', 'docx', 'doc' ]
+	//文件类型限制，默认不限制，注意写的是文件后缀
+	});
+	function beforeUploadFun(opt) {
+		opt.otherData = [ {
+			"name" : "name",
+			"value" : "zxm"
+		} ];
+	}
+	function onUploadFun(opt, data) {
+		alert(data);
+		uploadTools.uploadError(opt);//显示上传错误
+		uploadTools.uploadSuccess(opt);//显示上传成功
+	}
+
+	function testUpload() {
+		var opt = uploadTools.getOpt("fileUploadContent");
+		uploadEvent.uploadFileEvent(opt);
+	}
+</script>
+
+<script>
+	!function() {
+		laydate.skin('danlan');//切换皮肤，请查看skins下面皮肤库
+		laydate({
+			elem : '#ReportDate'
+		});//绑定元素	
+	}();
+	!function() {
+		laydate.skin('danlan');//切换皮肤，请查看skins下面皮肤库
+		laydate({
+			elem : '#ReportDate1'
+		});//绑定元素	
+	}();
+	//日期范围限制
+	var start = {
+		elem : '#start',
+		format : 'YYYY-MM-DD',
+		min : laydate.now(), //设定最小日期为当前日期
+		max : '2099-06-16', //最大日期
+		istime : true,
+		istoday : false,
+		choose : function(datas) {
+			end.min = datas; //开始日选好后，重置结束日的最小日期
+			end.start = datas //将结束日的初始值设定为开始日
+		}
+	};
+	var end = {
+		elem : '#end',
+		format : 'YYYY-MM-DD',
+		min : laydate.now(),
+		max : '2099-06-16',
+		istime : true,
+		istoday : false,
+		choose : function(datas) {
+			start.max = datas; //结束日选好后，充值开始日的最大日期
+		}
+	};
+	laydate(start);
+	laydate(end);
+	//自定义日期格式
+	laydate({
+		elem : '#test1',
+		format : 'YYYY年MM月DD日',
+		festival : true, //显示节日
+		choose : function(datas) { //选择日期完毕的回调
+			alert('得到：' + datas);
+		}
+	});
+	//日期范围限定在昨天到明天
+	laydate({
+		elem : '#hello3',
+		min : laydate.now(-1), //-1代表昨天，-2代表前天，以此类推
+		max : laydate.now(+1)
+	//+1代表明天，+2代表后天，以此类推
+	});
+	
+	
+</script>
+</html>

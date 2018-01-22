@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>资金方贷前、贷中、贷后管理页</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<script src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/fileUpload.js"></script>
+<script src="js/bootstrap.js"></script>
+<style type="text/css">
+li {
+	list-style-type: none;
+}
+
+ul.nav-pills {
+	top: 20px;
+	position: fixed;
+}
+</style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+	<div class="container" style="margin-top:10px">
+		<!-- 导航栏 -->
+		<div class="col-xs-3" id="myScrollspy">
+			<div class="container-fluid">
+				<div class="container-fluid">
+					<ul class="nav nav-pills nav-stacked">
+						<li class="active"><a href="#section1">资金方贷前</a>
+						</li>
+						<li><a href="#section2">资金方贷中</a>
+						</li>
+						<li><a href="#section3">资金方贷后</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-9">
+			<!--资金方贷前  -->
+			<div id="section1">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="col-sm-5 control-label" style="font-size:20px">资金方贷前</label>
+
+					</div>
+				</div>
+				<div class="col-md-12" style="border: 1px dotted red">
+					<!-- 元素展示 -->
+					<div class="section1AllLi">
+						<ul>
+							<li class="col-md-6"
+								style="height:300px;width:350px;border:1px dotted;margin:5px 5px">
+								<div class="form-group">
+									<label class="col-sm-3 control-label" for="CompanyName"
+										style="font-weight:normal">融资主体</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control" name="CompanyName"
+											id="CompanyName" placeholder="融资主体">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="PaymentTerm"
+										style="font-weight:normal">账期 </label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control" name="PaymentTerm"
+											id="PaymentTerm" placeholder="账期">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="MonthlyTransactionAmount" style="font-weight:normal">月交易金额</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="MonthlyTransactionAmount" id="MonthlyTransactionAmount"
+											placeholder="月交易金额 ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"
+										for="QuotaForTheApplication" style="font-weight:normal">申请额度</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control"
+											name="QuotaForTheApplication" id="QuotaForTheApplication"
+											placeholder="申请额度">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="ExpirationForTheApplication" style="font-weight:normal">申请期限</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="ExpirationForTheApplication"
+											id="ExpirationForTheApplication" placeholder="申请期限">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="FinanceProductRate"
+										style="font-weight:normal">融资产品利率</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="FinanceProductRate" id="FinanceProductRate"
+											placeholder="融资产品利率">
+										<div class="input-group-addon">%</div>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-6"
+								style="height:300px;width:350px;border:1px dotted;margin:5px 5px">
+								<div class="form-group">
+									<label class="col-sm-3 control-label" for="CompanyName"
+										style="font-weight:normal">融资主体</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control" name="CompanyName"
+											id="CompanyName" placeholder="融资主体">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="PaymentTerm"
+										style="font-weight:normal">账期 </label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control" name="PaymentTerm"
+											id="PaymentTerm" placeholder="账期">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="MonthlyTransactionAmount" style="font-weight:normal">月交易金额</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="MonthlyTransactionAmount" id="MonthlyTransactionAmount"
+											placeholder="月交易金额 ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"
+										for="QuotaForTheApplication" style="font-weight:normal">申请额度</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control"
+											name="QuotaForTheApplication" id="QuotaForTheApplication"
+											placeholder="申请额度">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="ExpirationForTheApplication" style="font-weight:normal">申请期限</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="ExpirationForTheApplication"
+											id="ExpirationForTheApplication" placeholder="申请期限">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="FinanceProductRate"
+										style="font-weight:normal">融资产品利率</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="FinanceProductRate" id="FinanceProductRate"
+											placeholder="融资产品利率">
+										<div class="input-group-addon">%</div>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-6"
+								style="height:300px;width:350px;border:1px dotted;margin:5px 5px">
+								<div class="form-group">
+									<label class="col-sm-3 control-label" for="CompanyName"
+										style="font-weight:normal">融资主体</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control" name="CompanyName"
+											id="CompanyName" placeholder="融资主体">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="PaymentTerm"
+										style="font-weight:normal">账期 </label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control" name="PaymentTerm"
+											id="PaymentTerm" placeholder="账期">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="MonthlyTransactionAmount" style="font-weight:normal">月交易金额</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="MonthlyTransactionAmount" id="MonthlyTransactionAmount"
+											placeholder="月交易金额 ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"
+										for="QuotaForTheApplication" style="font-weight:normal">申请额度</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control"
+											name="QuotaForTheApplication" id="QuotaForTheApplication"
+											placeholder="申请额度">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="ExpirationForTheApplication" style="font-weight:normal">申请期限</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="ExpirationForTheApplication"
+											id="ExpirationForTheApplication" placeholder="申请期限">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="FinanceProductRate"
+										style="font-weight:normal">融资产品利率</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="FinanceProductRate" id="FinanceProductRate"
+											placeholder="融资产品利率">
+										<div class="input-group-addon">%</div>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-6"
+								style="height:300px;width:350px;border:1px dotted;margin:5px 5px">
+								<div class="form-group">
+									<label class="col-sm-3 control-label" for="CompanyName"
+										style="font-weight:normal">融资主体</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control" name="CompanyName"
+											id="CompanyName" placeholder="融资主体">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="PaymentTerm"
+										style="font-weight:normal">账期 </label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control" name="PaymentTerm"
+											id="PaymentTerm" placeholder="账期">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="MonthlyTransactionAmount" style="font-weight:normal">月交易金额</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="MonthlyTransactionAmount" id="MonthlyTransactionAmount"
+											placeholder="月交易金额 ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"
+										for="QuotaForTheApplication" style="font-weight:normal">申请额度</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control"
+											name="QuotaForTheApplication" id="QuotaForTheApplication"
+											placeholder="申请额度">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="ExpirationForTheApplication" style="font-weight:normal">申请期限</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="ExpirationForTheApplication"
+											id="ExpirationForTheApplication" placeholder="申请期限">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="FinanceProductRate"
+										style="font-weight:normal">融资产品利率</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="FinanceProductRate" id="FinanceProductRate"
+											placeholder="融资产品利率">
+										<div class="input-group-addon">%</div>
+									</div>
+								</div>
+							</li>
+
+						</ul>
+						
+					</div>
+					<ul class="section1List">数据加载中，请稍后...
+					</ul>
+					<div class="col-md-12" align="right">
+
+						<label class="control-label" id="section1loading"><a
+							href="javascript:;" onClick="lanren.loadMore('section1List');">加载更多</a>
+						</label> <span class="caret" id="section1InfoHide"></span>
+					</div>
+				</div>
+
+			</div>
+			<!--资金方贷中  -->
+			<div id="section2">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="col-sm-5 control-label" style="font-size:20px">资金方贷中</label>
+					</div>
+				</div>
+				<div class="col-md-12" style="border: 1px dotted red">
+					<!-- 元素展示 -->
+					<div class="section2AllLi">
+						<ul>
+							<li class="col-md-6"
+								style="height:300px;width:350px;border:1px dotted;margin:5px 5px">
+								<div class="form-group">
+									<label class="col-sm-3 control-label" for="CompanyName"
+										style="font-weight:normal">融资主体</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control" name="CompanyName"
+											id="CompanyName" placeholder="融资主体">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="PaymentTerm"
+										style="font-weight:normal">账期 </label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control" name="PaymentTerm"
+											id="PaymentTerm" placeholder="账期">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="MonthlyTransactionAmount" style="font-weight:normal">月交易金额</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="MonthlyTransactionAmount" id="MonthlyTransactionAmount"
+											placeholder="月交易金额 ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"
+										for="QuotaForTheApplication" style="font-weight:normal">申请额度</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control"
+											name="QuotaForTheApplication" id="QuotaForTheApplication"
+											placeholder="申请额度">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="ExpirationForTheApplication" style="font-weight:normal">申请期限</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="ExpirationForTheApplication"
+											id="ExpirationForTheApplication" placeholder="申请期限">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="FinanceProductRate"
+										style="font-weight:normal">融资产品利率</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="FinanceProductRate" id="FinanceProductRate"
+											placeholder="融资产品利率">
+										<div class="input-group-addon">%</div>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-6"
+								style="height:300px;width:350px;border:1px dotted;margin:5px 5px">
+								<div class="form-group">
+									<label class="col-sm-3 control-label" for="CompanyName"
+										style="font-weight:normal">融资主体</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control" name="CompanyName"
+											id="CompanyName" placeholder="融资主体">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="PaymentTerm"
+										style="font-weight:normal">账期 </label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control" name="PaymentTerm"
+											id="PaymentTerm" placeholder="账期">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="MonthlyTransactionAmount" style="font-weight:normal">月交易金额</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="MonthlyTransactionAmount" id="MonthlyTransactionAmount"
+											placeholder="月交易金额 ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"
+										for="QuotaForTheApplication" style="font-weight:normal">申请额度</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control"
+											name="QuotaForTheApplication" id="QuotaForTheApplication"
+											placeholder="申请额度">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="ExpirationForTheApplication" style="font-weight:normal">申请期限</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="ExpirationForTheApplication"
+											id="ExpirationForTheApplication" placeholder="申请期限">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="FinanceProductRate"
+										style="font-weight:normal">融资产品利率</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="FinanceProductRate" id="FinanceProductRate"
+											placeholder="融资产品利率">
+										<div class="input-group-addon">%</div>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-6"
+								style="height:300px;width:350px;border:1px dotted;margin:5px 5px">
+								<div class="form-group">
+									<label class="col-sm-3 control-label" for="CompanyName"
+										style="font-weight:normal">融资主体</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control" name="CompanyName"
+											id="CompanyName" placeholder="融资主体">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="PaymentTerm"
+										style="font-weight:normal">账期 </label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control" name="PaymentTerm"
+											id="PaymentTerm" placeholder="账期">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="MonthlyTransactionAmount" style="font-weight:normal">月交易金额</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="MonthlyTransactionAmount" id="MonthlyTransactionAmount"
+											placeholder="月交易金额 ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"
+										for="QuotaForTheApplication" style="font-weight:normal">申请额度</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control"
+											name="QuotaForTheApplication" id="QuotaForTheApplication"
+											placeholder="申请额度">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="ExpirationForTheApplication" style="font-weight:normal">申请期限</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="ExpirationForTheApplication"
+											id="ExpirationForTheApplication" placeholder="申请期限">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="FinanceProductRate"
+										style="font-weight:normal">融资产品利率</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="FinanceProductRate" id="FinanceProductRate"
+											placeholder="融资产品利率">
+										<div class="input-group-addon">%</div>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-6"
+								style="height:300px;width:350px;border:1px dotted;margin:5px 5px">
+								<div class="form-group">
+									<label class="col-sm-3 control-label" for="CompanyName"
+										style="font-weight:normal">融资主体</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control" name="CompanyName"
+											id="CompanyName" placeholder="融资主体">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="PaymentTerm"
+										style="font-weight:normal">账期 </label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control" name="PaymentTerm"
+											id="PaymentTerm" placeholder="账期">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="MonthlyTransactionAmount" style="font-weight:normal">月交易金额</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="MonthlyTransactionAmount" id="MonthlyTransactionAmount"
+											placeholder="月交易金额 ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"
+										for="QuotaForTheApplication" style="font-weight:normal">申请额度</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control"
+											name="QuotaForTheApplication" id="QuotaForTheApplication"
+											placeholder="申请额度">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="ExpirationForTheApplication" style="font-weight:normal">申请期限</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="ExpirationForTheApplication"
+											id="ExpirationForTheApplication" placeholder="申请期限">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="FinanceProductRate"
+										style="font-weight:normal">融资产品利率</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="FinanceProductRate" id="FinanceProductRate"
+											placeholder="融资产品利率">
+										<div class="input-group-addon">%</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<ul class="section2List">数据加载中，请稍后...
+					</ul>
+					<div class="col-md-12" align="right">
+
+						<label class="control-label" id="section2loading"><a
+							href="javascript:;" onClick="lanren.loadMore('section2List');">加载更多</a>
+						</label> <span class="caret"></span>
+					</div>
+				</div>
+			</div>
+			<!--资金方贷后  -->
+			<div id="section3">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="col-sm-5 control-label" style="font-size:20px">资金方贷后</label>
+
+					</div>
+				</div>
+
+				<div class="col-md-12" style="border: 1px dotted red">
+					<!-- 元素展示 -->
+					<div class="section3AllLi">
+						<ul>
+							<li class="col-md-6"
+								style="height:300px;width:350px;border:1px dotted;margin:5px 5px">
+								<div class="form-group">
+									<label class="col-sm-3 control-label" for="CompanyName"
+										style="font-weight:normal">融资主体</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control" name="CompanyName"
+											id="CompanyName" placeholder="融资主体">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="PaymentTerm"
+										style="font-weight:normal">账期 </label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control" name="PaymentTerm"
+											id="PaymentTerm" placeholder="账期">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="MonthlyTransactionAmount" style="font-weight:normal">月交易金额</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="MonthlyTransactionAmount" id="MonthlyTransactionAmount"
+											placeholder="月交易金额 ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"
+										for="QuotaForTheApplication" style="font-weight:normal">申请额度</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control"
+											name="QuotaForTheApplication" id="QuotaForTheApplication"
+											placeholder="申请额度">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="ExpirationForTheApplication" style="font-weight:normal">申请期限</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="ExpirationForTheApplication"
+											id="ExpirationForTheApplication" placeholder="申请期限">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="FinanceProductRate"
+										style="font-weight:normal">融资产品利率</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="FinanceProductRate" id="FinanceProductRate"
+											placeholder="融资产品利率">
+										<div class="input-group-addon">%</div>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-6"
+								style="height:300px;width:350px;border:1px dotted;margin:5px 5px">
+								<div class="form-group">
+									<label class="col-sm-3 control-label" for="CompanyName"
+										style="font-weight:normal">融资主体</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control" name="CompanyName"
+											id="CompanyName" placeholder="融资主体">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="PaymentTerm"
+										style="font-weight:normal">账期 </label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control" name="PaymentTerm"
+											id="PaymentTerm" placeholder="账期">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="MonthlyTransactionAmount" style="font-weight:normal">月交易金额</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="MonthlyTransactionAmount" id="MonthlyTransactionAmount"
+											placeholder="月交易金额 ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"
+										for="QuotaForTheApplication" style="font-weight:normal">申请额度</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control"
+											name="QuotaForTheApplication" id="QuotaForTheApplication"
+											placeholder="申请额度">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="ExpirationForTheApplication" style="font-weight:normal">申请期限</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="ExpirationForTheApplication"
+											id="ExpirationForTheApplication" placeholder="申请期限">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="FinanceProductRate"
+										style="font-weight:normal">融资产品利率</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="FinanceProductRate" id="FinanceProductRate"
+											placeholder="融资产品利率">
+										<div class="input-group-addon">%</div>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-6"
+								style="height:300px;width:350px;border:1px dotted;margin:5px 5px">
+								<div class="form-group">
+									<label class="col-sm-3 control-label" for="CompanyName"
+										style="font-weight:normal">融资主体</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control" name="CompanyName"
+											id="CompanyName" placeholder="融资主体">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="PaymentTerm"
+										style="font-weight:normal">账期 </label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control" name="PaymentTerm"
+											id="PaymentTerm" placeholder="账期">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="MonthlyTransactionAmount" style="font-weight:normal">月交易金额</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="MonthlyTransactionAmount" id="MonthlyTransactionAmount"
+											placeholder="月交易金额 ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"
+										for="QuotaForTheApplication" style="font-weight:normal">申请额度</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control"
+											name="QuotaForTheApplication" id="QuotaForTheApplication"
+											placeholder="申请额度">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="ExpirationForTheApplication" style="font-weight:normal">申请期限</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="ExpirationForTheApplication"
+											id="ExpirationForTheApplication" placeholder="申请期限">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="FinanceProductRate"
+										style="font-weight:normal">融资产品利率</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="FinanceProductRate" id="FinanceProductRate"
+											placeholder="融资产品利率">
+										<div class="input-group-addon">%</div>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-6"
+								style="height:300px;width:350px;border:1px dotted;margin:5px 5px">
+								<div class="form-group">
+									<label class="col-sm-3 control-label" for="CompanyName"
+										style="font-weight:normal">融资主体</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control" name="CompanyName"
+											id="CompanyName" placeholder="融资主体">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="PaymentTerm"
+										style="font-weight:normal">账期 </label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control" name="PaymentTerm"
+											id="PaymentTerm" placeholder="账期">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="MonthlyTransactionAmount" style="font-weight:normal">月交易金额</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="MonthlyTransactionAmount" id="MonthlyTransactionAmount"
+											placeholder="月交易金额 ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label"
+										for="QuotaForTheApplication" style="font-weight:normal">申请额度</label>
+									<div class=" col-sm-7 input-group">
+										<input type="text" class="form-control"
+											name="QuotaForTheApplication" id="QuotaForTheApplication"
+											placeholder="申请额度">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label "
+										for="ExpirationForTheApplication" style="font-weight:normal">申请期限</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="ExpirationForTheApplication"
+											id="ExpirationForTheApplication" placeholder="申请期限">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label " for="FinanceProductRate"
+										style="font-weight:normal">融资产品利率</label>
+									<div class="input-group col-sm-7">
+										<input type="text" class="form-control"
+											name="FinanceProductRate" id="FinanceProductRate"
+											placeholder="融资产品利率">
+										<div class="input-group-addon">%</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<ul class="section3List">数据加载中，请稍后...
+					</ul>
+					<div class="col-md-12" align="right">
+
+						<label class="control-label" id="section3loading"><a
+							href="javascript:;" onClick="lanren.loadMore('section3List');">加载更多</a>
+						</label> <span class="caret"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	/* 	//隐藏显示资金方贷前 在使用更多的时候这个是不生效的
+	 $("#section1InfoHide").click(function() {
+	 $("#section1AllUl").hide();
+	 }); */
+
+	//加载更多
+	var _content01 = []; //临时存储li循环内容
+	var _content02 = []; //临时存储li循环内容
+	var _content03 = []; //临时存储li循环内容
+	var lanren = {
+		_default : 2, //默认显示图片个数
+		_loading : 2, //每次点击按钮后加载的个数
+		init : function(sectionAllLi, sectionList) {
+			if (sectionAllLi == "section1AllLi"
+					&& sectionList == "section1List") {
+				var lis = $(".col-md-12 .section1AllLi li");//获取所有的元素
+				$(".col-md-12 ul." + sectionList + "").html("");
+				for ( var n = 0; n < lanren._default; n++) {
+					lis.eq(n).appendTo(".col-md-12 ul." + sectionList + "");
+				}
+
+				for ( var i = lanren._default; i < lis.length; i++) {
+					_content01.push(lis.eq(i));
+				}
+				$(".col-md-12 .section1AllLi").html("");
+			} else if (sectionAllLi == "section2AllLi"
+					&& sectionList == "section2List") {
+				var lis = $(".col-md-12 .section2AllLi li");//获取所有的元素
+				$(".col-md-12 ul." + sectionList + "").html("");
+				for ( var n = 0; n < lanren._default; n++) {
+					lis.eq(n).appendTo(".col-md-12 ul." + sectionList + "");
+				}
+
+				for ( var i = lanren._default; i < lis.length; i++) {
+					_content02.push(lis.eq(i));
+				}
+				$(".col-md-12 .section2AllLi").html("");
+			} else {
+
+				var lis = $(".col-md-12 .section3AllLi li");//获取所有的元素
+				$(".col-md-12 ul." + sectionList + "").html("");
+				for ( var n = 0; n < lanren._default; n++) {
+					lis.eq(n).appendTo(".col-md-12 ul." + sectionList + "");
+				}
+
+				for ( var i = lanren._default; i < lis.length; i++) {
+					_content03.push(lis.eq(i));
+				}
+				$(".col-md-12 .section3AllLi").html("");
+			}
+		},
+		loadMore : function(sectionList) {
+			if (sectionList == "section1List") {
+				var mLis = $(".col-md-12 ul.section1List li").length;
+				for ( var i = 0; i < lanren._loading; i++) {
+					var target = _content01.shift();
+					if (!target) {
+						$('.col-md-12 #section1loading')
+								.html("<p>全部加载完毕...</p>");
+						_content01 = [];
+						break;
+					}
+					$(".col-md-12 ul.section1List").append(target);
+
+				}
+			} else if (sectionList == "section2List") {
+
+				var mLis = $(".col-md-12 ul.section2List li").length;
+				for ( var i = 0; i < lanren._loading; i++) {
+					var target = _content02.shift();
+					if (!target) {
+						$('.col-md-12 #section2loading')
+								.html("<p>全部加载完毕...</p>");
+						_content02 = [];
+						break;
+					}
+					$(".col-md-12 ul.section2List").append(target);
+
+				}
+			} else {
+
+				var mLis = $(".col-md-12 ul.section3List li").length;
+				for ( var i = 0; i < lanren._loading; i++) {
+					var target = _content03.shift();
+					if (!target) {
+						$('.col-md-12 #section3loading')
+								.html("<p>全部加载完毕...</p>");
+						_content03 = [];
+						break;
+					}
+					$(".col-md-12 ul.section3List").append(target);
+
+				}
+			}
+
+		}
+	}
+	$(function() {
+		lanren.init("section1AllLi", "section1List");
+
+		lanren.init("section2AllLi", "section2List");
+		lanren.init("section3AllLi", "section3List");
+	})
+</script>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="piaoLian"
+  id="myeclipse.1515728087156"
+  context-root="/piaoLian"
+  j2ee-spec="5.0"
+  archive="piaoLian.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
